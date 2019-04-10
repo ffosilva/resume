@@ -13,7 +13,7 @@
 #              (currently linux = evince, OSX = open)
 #    clean   : removes the obj/ directory holding temporary files
 
-PROJECT = main
+PROJECT = resume
 
 default: obj/$(PROJECT).pdf
 
