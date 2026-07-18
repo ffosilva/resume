@@ -5,7 +5,11 @@ replace() {
     local replace=$2
     local filename=$3
 
-    sed -i "s/${search}/${replace}/g" ${filename}
+    if [ "$(uname)" = "Darwin" ]; then
+        sed -i '' "s/${search}/${replace}/g" ${filename}
+    else
+        sed -i "s/${search}/${replace}/g" ${filename}
+    fi
 }
 
 bolderize() {
